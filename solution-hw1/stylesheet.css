@@ -21,6 +21,8 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
     height: auto;
+
+    width: 25%;
 }
 
 .selected {
@@ -41,6 +43,7 @@ a:hover {
     width:20%;
     margin: auto auto;
     border:2px solid black;
+    text-align: center;
 }
 
 .button {
@@ -59,5 +62,6 @@ a:hover {
 .product {
     margin-top: 20px;
     margin-bottom: 20px;
+    text-align: left;
     /* How do I align text to center-left */
 }
