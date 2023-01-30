@@ -1,0 +1,63 @@
+body {
+    font-family: Roboto, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+hr {
+    height:2px;
+    background-color: black;
+}
+
+a:link {
+    color: black;
+}
+
+a:hover {
+    font-weight: 550;
+}
+
+.productgallery {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+}
+
+.selected {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: yellow;
+    width: fit-content;
+}
+
+
+.logo {
+    width: 30%;
+}
+
+.galleryimage{
+    width:20%;
+    margin: auto auto;
+    border:2px solid black;
+}
+
+.button {
+    border:3px solid black;
+    color: black;
+    background-color: yellow;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 4px 2px;
+  }
+
+.product {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* How do I align text to center-left */
+}
