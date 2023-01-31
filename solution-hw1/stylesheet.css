@@ -50,6 +50,7 @@ a:link {
     display: block;
     text-decoration: none;
     padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .title {
