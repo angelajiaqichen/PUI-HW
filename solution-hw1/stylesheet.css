@@ -12,13 +12,13 @@ a:link {
     color: black;
 }
 
-/* a:hover {
-    font-weight: 550;
-} */
-
 .product:hover { 
     background-color: yellow;
     font-weight: 550;
+}
+
+.price {
+    margin-top: 5px;
 }
 
 .productgallery {
@@ -58,17 +58,11 @@ a:link {
     /* margin-top: 40px; */
 }
 
-.button {
-    border: 5px solid;
-    color: black;
-    background-color: yellow;
-    padding: 8px 20px;
+.remove {
+    font-weight: 800px;
+    font-size: 14px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    font-weight: bold;
-    margin: 4px 2px;
+
   }
 
 .product {
@@ -84,7 +78,22 @@ a:link {
     /* padding helps create nice yellow border around container when hovered over */
 }
 
+.cartitem {
+    margin-right: auto; 
+    margin-left: auto; 
+    text-align: center;
+    width: 30%
+}
+
+.cartimage {
+    width: 30%;
+    border: 3px solid;
+    /* display: block;  */
+    text-align: center;
+    margin-bottom: 0px; 
+}
+
 .nameandprice {
-    margin-bottom: 2px;
+    margin-bottom: 0px;
     margin-top: 8px; 
 }
