@@ -1,6 +1,6 @@
 body {
     font-family: Verdana, Arial;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 300;
     border: solid black;
 }
@@ -21,13 +21,6 @@ a:link {
 
 .price {
     margin-top: 5px;
-}
-
-.productgallery {
-    /* text-align: center;
-    margin-left: auto;
-    margin-right: auto; */
-    height: auto;
 }
 
 .selected {
@@ -67,6 +60,13 @@ a:link {
     flex-shrink: 0;
 }
 
+.gallery {
+    display: flex;
+    /* justify-content: flex-start; */
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
 .galleryimage{
     width: 100%;
     border: 3px solid black;
@@ -84,14 +84,14 @@ a:link {
 
 .product {
     /* margin-top: 10px; */
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     /* text-align: left; */
     margin-right: auto; 
     margin-left: auto; 
-    width: 23%;
+    width: 30%;
     padding-top: 5px;
-    padding-left: 5px;
-    padding-right: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
     /* padding helps create nice yellow border around container when hovered over */
 }
 
@@ -113,7 +113,7 @@ a:link {
 .nameandprice {
     margin-bottom: 0px;
     margin-top: 8px; 
-    width: 95%
+    /* width: 95% */
 }
 
 .cartbottom {
@@ -155,7 +155,7 @@ a:link {
     text-align: left;
     margin-left: auto;
     margin-right: auto;
-    font-size: 24px;
+    font-size: 22px;
     /* margin-top: 0px;
     margin-bottom: 0px; */
     /* I wanted to reduce the padding between glazing 
@@ -178,7 +178,7 @@ a:link {
     padding: 7px 10px;
     margin-bottom: 14px;
     width: 100%; 
-    font-size: 24px; 
+    font-size: 22px; 
     font-family: Verdana, Arial;
 }
 
