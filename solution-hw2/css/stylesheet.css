@@ -7,7 +7,7 @@ body {
     font-size: 22px;
     font-weight: 300;
     border: solid black;
-    height: 105vh; 
+    height: 100vh; 
     /* height and overflow fixed my bug with body height not filling entire screen */
 }
 
