@@ -1,7 +1,8 @@
 body {
-    font-family: Gill Sans, Verdana, Arial;
+    font-family: Verdana, Arial;
     font-size: 24px;
     font-weight: 300;
+    border: solid black;
 }
 
 hr {
@@ -30,37 +31,40 @@ a:link {
 }
 
 .selected {
-    display: block;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    /* display: block; */
+    /* text-align: center; */
+    /* margin-left: 80px;
+    margin-right: 80px; */
     background-color: yellow;
-    width: fit-content;
+    /* width: fit-content; */
     font-weight: 700;
     text-decoration: none;
 }
 
 .intro {
-    text-align: center;
+    /* text-align: center; */
     font-size: 21px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* display: block; */
     text-decoration: none;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    /* padding-bottom: 10px;
+    padding-top: 10px; */
 }
 
 .title {
     font-size: 32px;
+    /* padding-left: 30px; */
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .logo {
-    padding-left: 40px;
-    width: 30%;
+    padding: 20px;
+    /* width: 30%; */
+    width: 400px;
+    flex-shrink: 0;
 }
 
 .galleryimage{
@@ -137,8 +141,6 @@ a:link {
 }
 
 .productdetail {
-    /* margin-top: 10px; */
-    /* text-align: left; */
     margin-right: auto; 
     margin-left: auto; 
     text-align: center;
@@ -187,3 +189,25 @@ a:link {
     padding-left: 20px;
     font-weight: 600; 
 }
+
+nav {
+    display: flex;
+}
+
+.topbartext{
+    display: flex;
+    margin-right: 80px;
+    justify-content: right;
+    gap: 80px;
+    /* position: right; */
+    /* text-align: right; */
+} 
+
+.topbar{
+    font-size: 22px;
+    height: 22px;
+    margin-top: 40px;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
