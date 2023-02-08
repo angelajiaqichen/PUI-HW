@@ -60,6 +60,8 @@ a:link {
     flex-shrink: 0;
 }
 
+/* Gallery Page */
+
 .gallery {
     display: flex;
     /* justify-content: flex-start; */
@@ -75,12 +77,6 @@ a:link {
     /* margin-top: 40px; */
 }
 
-.remove {
-    font-weight: 900px;
-    font-size: 12px;
-    text-align: center;
-    margin-top: 0px; 
-  }
 
 .product {
     /* margin-top: 10px; */
@@ -95,19 +91,52 @@ a:link {
     /* padding helps create nice yellow border around container when hovered over */
 }
 
+/* Cart Page */
+
+.cart{
+    width: 60%;
+    /* margin-left: 40%; */
+    
+    position: absolute;
+    right: 0px;
+    display: flex;
+    /* margin-right: 7%; */
+    flex-direction: column; /* without this the two cart items will be jammed on the same row */
+}
+
+/* .whitespace {
+
+} */
+
 .cartitem {
-    margin-right: auto; 
-    margin-left: auto; 
-    text-align: center;
-    width: 30%
+    width: 98%;
+    /* flex-shrink: 0;
+    flex-grow: 1; */
+    display: flex;
+    align-items: center;
+    
 }
 
 .cartimage {
-    width: 30%;
-    border: 2.5px solid;
-    /* display: block;  */
-    text-align: center;
+    width: 70%;
+    border: 3px solid;
     margin-bottom: 0px; 
+    flex-shrink: 0;
+}
+
+.cartimagecontainer {
+    width: 25%;
+}
+
+
+.remove {
+    font-weight: 900px;
+    font-size: 12px;
+    width: 60%;
+    /* text-align: center; */
+    margin-top: 0px; 
+    /* flex-shrink: 0;
+    margin-right: 0px; */
 }
 
 .nameandprice {
@@ -116,9 +145,21 @@ a:link {
     /* width: 95% */
 }
 
+.cartproductdescription {
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: flex;
+}
+
+.cartproductprice{
+    margin-right: 80px;
+    text-align: right;
+    flex-grow: 1;
+}
+
 .cartbottom {
     width: 60%;
-    text-align: center;
+    /* text-align: center; */
     margin-left: auto;
     margin-right: auto;
 }
@@ -134,6 +175,8 @@ a:link {
     padding: 10px 6px;
     font-weight: 600;
 }
+
+/* Details Page */
 
 .detailimage {
     width: 60%;
@@ -192,6 +235,9 @@ a:link {
     padding-left: 20px;
     font-weight: 600; 
 }
+
+
+/* Navigation  */
 
 nav {
     display: flex;
