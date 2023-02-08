@@ -1,13 +1,22 @@
+html, body {
+    overflow: auto; 
+} 
+
 body {
     font-family: Verdana, Arial;
     font-size: 22px;
     font-weight: 300;
     border: solid black;
+    height: 105vh; 
+    /* height and overflow fixed my bug with body height not filling entire screen */
 }
 
 hr {
     height: 4px;
     background-color: black;
+    width: 100%;
+    margin-right: 60px;
+    
 }
 
 a:link {
@@ -98,7 +107,7 @@ a:link {
     /* margin-left: 40%; */
     
     position: absolute;
-    right: 0px;
+    right: 10px;
     display: flex;
     /* margin-right: 7%; */
     flex-direction: column; /* without this the two cart items will be jammed on the same row */
@@ -149,12 +158,14 @@ a:link {
     flex-grow: 1;
     flex-shrink: 0;
     display: flex;
+    font-size: 21px;
 }
 
 .cartproductprice{
-    margin-right: 80px;
+    margin-right: 60px;
     text-align: right;
     flex-grow: 1;
+    font-size: 23px;
 }
 
 .cartbottom {
@@ -168,12 +179,15 @@ a:link {
     width: 20%;
     /* display: block; */
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto; */
+    margin-right: 80px;
+    margin-top: 50px;
     border: 2.5px solid black;
     background-color: yellow;
     padding: 10px 6px;
     font-weight: 600;
+    position: absolute;
+    right: 0px;
 }
 
 /* Details Page */
