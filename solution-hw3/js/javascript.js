@@ -1,3 +1,5 @@
+// Add JavaScript objects to represent price adaptations based on user selections. 
+// They are listed below. You may hard-code these objects. 
 const glazingOptions = [
     {
       glazingOption: 'Keep original',
@@ -35,3 +37,13 @@ const packSizeOptions = [
       priceAdaptation: 10,
     },
 ];
+
+// Populate the options of drop-down fields with const objects
+for (let i = 0; i < glazingOptions.length; i++){
+    // create each option
+    var option = document.createElement('option');
+    option.text = glazingOptions[i].glazingOption; 
+    option.value = glazingOptions[i].priceAdaptation; 
+    const select = document.querySelector('#glazingDropdown'); 
+    select.appendChild(option);
+  }
