@@ -55,3 +55,20 @@ for (let i = 0; i < glazingOptions.length; i++){
     const select = document.querySelector('#packDropdown'); 
     select.appendChild(option);
   }
+
+
+  function glazingTrigger(element){
+    const displayPrice = document.querySelector('.detailTotalPrice');
+    const glazingChange = parseFloat(element.value); 
+    const numPacks = document.querySelector('#packDropdown').value; 
+    const currentPrice = (2.49 + glazingChange) * numPacks; 
+    displayPrice.innerText = '$ ' + parseFloat(currentPrice).toFixed(2); 
+  }
+  
+  function packTrigger(element){
+    const displayPrice = document.querySelector('.detailTotalPrice');
+    const packChange = element.value; 
+    const glazingPrice = document.querySelector('#glazingDropdown').value; 
+    const currentPrice = (2.49 + parseFloat(glazingPrice)) * packChange; 
+    displayPrice.innerText = '$ ' + parseFloat(currentPrice).toFixed(2); 
+  }
