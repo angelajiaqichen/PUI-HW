@@ -47,3 +47,11 @@ for (let i = 0; i < glazingOptions.length; i++){
     const select = document.querySelector('#glazingDropdown'); 
     select.appendChild(option);
   }
+
+  for (let i = 0; i < packSizeOptions.length; i++){
+    var option = document.createElement('option');
+    option.text = packSizeOptions[i].packSizeOption; 
+    option.value = packSizeOptions[i].priceAdaptation; 
+    const select = document.querySelector('#packDropdown'); 
+    select.appendChild(option);
+  }

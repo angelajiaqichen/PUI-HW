@@ -36,7 +36,7 @@
             <p>Glazing:</p>
                 <select class="dropdown"
                   id = "glazingDropdown"
-                  onchange = glazingChange(this)>
+                  onchange = "glazingTrigger(this)">
                   <!-- <option>Keep original</option>
                   <option>Sugar milk</option>
                   <option>Vanilla milk</option>
@@ -44,7 +44,9 @@
                 </select>
 
             <p>Pack Size:</p>
-              <select class="dropdown">
+              <select class="dropdown"
+                id="packDropdown"
+                onchange = "packTrigger(this)">
                 <!-- <option>1</option>
                 <option>3</option>
                 <option>6</option>
