@@ -62,7 +62,8 @@ for (let i = 0; i < glazingOptions.length; i++){
     const glazingChange = parseFloat(element.value); 
     const numPacks = document.querySelector('#packDropdown').value; 
     const currentPrice = (2.49 + glazingChange) * numPacks; 
-    displayPrice.innerText = '$ ' + parseFloat(currentPrice).toFixed(2); 
+    displayPrice.innerText = '$ ' + parseFloat(currentPrice).toFixed(2); //keeps two decimal places
+    // https://www.w3schools.com/jsref/jsref_tofixed.asp
   }
   
   function packTrigger(element){
