@@ -110,7 +110,7 @@ function glazingTrigger(element){
   const displayPrice = document.querySelector('.detailTotalPrice');
   const glazingChange = parseFloat(element.value); 
   const numPacks = document.querySelector('#packDropdown').value; 
-  const currentPrice = (2.49 + glazingChange) * numPacks; 
+  const currentPrice = (basePrice + glazingChange) * numPacks; 
   displayPrice.innerText = '$ ' + parseFloat(currentPrice).toFixed(2); //keeps two decimal places
   // https://www.w3schools.com/jsref/jsref_tofixed.asp
 }
@@ -119,7 +119,7 @@ function packTrigger(element){
   const displayPrice = document.querySelector('.detailTotalPrice');
   const packChange = element.value; 
   const glazingPrice = document.querySelector('#glazingDropdown').value; 
-  const currentPrice = (2.49 + parseFloat(glazingPrice)) * packChange; 
+  const currentPrice = (basePrice + parseFloat(glazingPrice)) * packChange; 
   displayPrice.innerText = '$ ' + parseFloat(currentPrice).toFixed(2); 
 }
 
@@ -134,6 +134,8 @@ class Roll {
   }
 }
 
+// cart functionality
+
 function addToCartButton() {
   const newRoll = new Roll();
   newRoll.type = rollType;   
@@ -144,7 +146,7 @@ function addToCartButton() {
   newRoll.basePrice = basePrice; 
   cart.push(newRoll); 
 
-  // console.log(cart); 
+  console.log(cart); 
 }
 
 let addToCart = document.querySelector("#detailbutton"); 
