@@ -237,6 +237,9 @@ button {
     background-color: yellow;
     padding: 10px 20px;
     /* display: flex; */
+    font-family: Verdana, Arial;
+    font-size: 22px;
+    font-weight: 600;
 }
 
 button:hover {

@@ -1,4 +1,5 @@
-const rolls = {
+// had to rename rolls to rollsCopy to avoid redeclaration error
+const rollsCopy = {
     "Original": {
         "basePrice": 2.49,
         "imageFile": "original-cinnamon-roll.jpg"
