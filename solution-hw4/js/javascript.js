@@ -32,9 +32,20 @@ const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const rollType = params.get("roll");
 
+
+// if (rollType !== null) { //TypeError: Cannot set properties of null (setting 'src')
+//   const rollImage = document.querySelector(".detailimage");
+//   rollImage.src = 'products/' + rollType + '-cinnamon-roll.jpg';
+//   const headerElement = document.querySelector(".title");
+//   headerElement.innerText = rollType +' Cinnamon Roll';
+//   const rollPrice = document.querySelector(".detailTotalPrice"); 
+//   const basePrice = rolls[rollType].basePrice; // get baseprice from rollsData
+//   rollPrice.innerText = "$ " + basePrice; // office hours - without this the price wouldnt update
+// }
+
 const rollImage = document.querySelector(".detailimage");
 rollImage.src = 'products/' + rollType + '-cinnamon-roll.jpg';
-// console.log(rollType);
+console.log(rollType);
 
 const headerElement = document.querySelector(".title");
 headerElement.innerText = rollType +' Cinnamon Roll';
