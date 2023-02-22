@@ -38,12 +38,15 @@ rollImage.src = 'products/' + rollType.toLowerCase() + '-cinnamon-roll.jpg';
 
 const headerElement = document.querySelector(".title");
 headerElement.innerText = rollType +' Cinnamon Roll';
+// console.log(headerElement);
 
 const rollPrice = document.querySelector(".detailTotalPrice"); 
 const basePrice = rolls[rollType].basePrice; // get baseprice from rollsData
-rollPrice.innerText = "$ " + basePrice; 
+rollPrice.innerText = "$ " + basePrice; // office hours - without this the price wouldnt update
 let cart = []; // init cart
 
+
+// HW 3
 // Add JavaScript objects to represent price adaptations based on user selections. 
 // They are listed below. You may hard-code these objects. 
 const glazingOptions = [
@@ -120,7 +123,7 @@ function packTrigger(element){
   displayPrice.innerText = '$ ' + parseFloat(currentPrice).toFixed(2); 
 }
 
-// // HW 4
+// HW 4
 
 class Roll {
   constructor(rollType, rollGlazing, packSize, basePrice) {
@@ -131,7 +134,7 @@ class Roll {
   }
 }
 
-function onSelectValueChange() {
+function addToCartButton() {
   const newRoll = new Roll();
   newRoll.type = rollType;   
   var currGlazing = document.querySelector('#glazingDropdown'); 
@@ -141,20 +144,9 @@ function onSelectValueChange() {
   newRoll.basePrice = basePrice; 
   cart.push(newRoll); 
 
-  console.log(cart); 
+  // console.log(cart); 
 }
 
-let addToCart = document.querySelector("#cartbutton"); 
-addToCart.addEventListener('click', onSelectValueChange);
+let addToCart = document.querySelector("#detailbutton"); 
+addToCart.addEventListener('click', addToCartButton);
 
-// function addToCart(){
-//   const addRoll = new Roll(rollType, rollGlazing, packSize, basePrice);
-//   cart.push(addRoll);
-//   console.log(cart);
-//   displayTotal();
-// }
-
-
-// const addToCartButton = document.querySelector('#cartbutton .highlight');
-// addToCartButton.onclick = addToCart;
-// // console.log(addToCartButton)
