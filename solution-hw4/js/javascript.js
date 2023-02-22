@@ -45,7 +45,7 @@ const rollType = params.get("roll");
 // }
 
 const rollImage = document.querySelector(".detailimage");
-rollImage.src = 'products/' + rollType + '-cinnamon-roll.jpg';
+rollImage.src = 'products/' + rollType.toLowerCase() + '-cinnamon-roll.jpg';
 console.log(rollType);
 
 const headerElement = document.querySelector(".title");
