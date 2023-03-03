@@ -1,0 +1,293 @@
+html, body {
+    overflow: auto; 
+} 
+
+body {
+    font-family: Verdana, Arial;
+    font-size: 22px;
+    font-weight: 300;
+    border: solid black;
+    height: 105vh; 
+    /* height and overflow fixed my bug with body height not filling entire screen */
+}
+
+hr {
+    height: 4px;
+    background-color: black;
+    width: 100%;
+    margin-right: 60px;
+    
+}
+
+a:link {
+    color: black;
+}
+
+.product:hover { 
+    background-color: yellow;
+    font-weight: 550;
+}
+
+.price {
+    margin-top: 5px;
+}
+
+.selected {
+    /* display: block; */
+    /* text-align: center; */
+    /* margin-left: 80px;
+    margin-right: 80px; */
+    background-color: yellow;
+    /* width: fit-content; */
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.intro {
+    /* text-align: center; */
+    font-size: 21px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* display: block; */
+    text-decoration: none;
+    /* padding-bottom: 10px;
+    padding-top: 10px; */
+}
+
+.title {
+    font-size: 32px;
+    /* padding-left: 30px; */
+    margin-left: auto;
+    margin-right: auto;
+    /* text-align: center; */
+}
+
+.logo {
+    padding: 20px;
+    /* width: 30%; */
+    width: 400px;
+    flex-shrink: 0;
+}
+
+/* Gallery Page */
+
+.gallery {
+    display: flex;
+    /* justify-content: flex-start; */
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+.galleryimage{
+    width: 100%;
+    border: 3px solid black;
+    display: block; 
+    margin-bottom: 0px; 
+    /* margin-top: 40px; */
+}
+
+
+.product {
+    /* margin-top: 10px; */
+    /* margin-bottom: 30px; */
+    /* text-align: left; */
+    margin-right: auto; 
+    margin-left: auto; 
+    width: 30%;
+    padding-top: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    /* padding helps create nice yellow border around container when hovered over */
+}
+
+/* Cart Page */
+
+.cart{
+    width: 60%;
+    /* margin-left: 40%; */
+    
+    position: absolute;
+    right: 10px;
+    display: flex;
+    /* margin-right: 7%; */
+    flex-direction: column; /* without this the two cart items will be jammed on the same row */
+}
+
+/* .whitespace {
+
+} */
+
+.cartitem {
+    width: 98%;
+    /* flex-shrink: 0;
+    flex-grow: 1; */
+    display: flex;
+    align-items: center;
+    
+}
+
+.cartimage {
+    width: 70%;
+    border: 3px solid;
+    margin-bottom: 0px; 
+    flex-shrink: 0;
+}
+
+.cartimagecontainer {
+    width: 25%;
+}
+
+
+.remove {
+    font-weight: 900px;
+    font-size: 12px;
+    width: 60%;
+    /* text-align: center; */
+    margin-top: 0px; 
+    /* flex-shrink: 0;
+    margin-right: 0px; */
+}
+
+.nameandprice {
+    margin-bottom: 0px;
+    margin-top: 8px; 
+    /* width: 95% */
+}
+
+.cartproductdescription {
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: flex;
+    font-size: 21px;
+}
+
+.cartproductprice{
+    margin-right: 60px;
+    text-align: right;
+    flex-grow: 1;
+    font-size: 23px;
+}
+
+.cartbottom {
+    width: 60%;
+    /* text-align: center; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cartbutton {
+    width: 20%;
+    /* display: block; */
+    text-align: center;
+    /* margin-left: auto; */
+    margin-right: 80px;
+    margin-top: 50px;
+    border: 2.5px solid black;
+    background-color: yellow;
+    padding: 10px 6px;
+    font-weight: 600;
+    position: absolute;
+    right: 0px;
+}
+
+/* Details Page */
+
+.detailimage {
+    width: 60%;
+    height: 60%;
+    border: 3px solid black;
+}
+
+.productdetail {
+    /* margin-right: auto; 
+    margin-left: auto; 
+    text-align: center; */
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 70px;
+}
+
+.detailbottom{
+    width: 30%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 22px;
+    /* margin-top: 0px;
+    margin-bottom: 0px; */
+    /* I wanted to reduce the padding between glazing 
+    and the dropdown but this didnt work */
+}
+
+.detailbutton {
+    text-align: center;
+    margin-left: auto;
+    margin-right: 0px;
+    border: 3px solid black;
+    background-color: yellow;
+    padding: 10px 20px;
+    /* display: flex; */
+}
+
+button {
+    text-align: center;
+    margin-left: auto;
+    margin-right: 0px;
+    border: 3px solid black;
+    background-color: yellow;
+    padding: 10px 20px;
+    /* display: flex; */
+    font-family: Verdana, Arial;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+button:hover {
+    cursor: pointer; 
+}
+
+.dropdown {
+    cursor: pointer; 
+    border: 3px solid; 
+    padding: 7px 10px;
+    margin-bottom: 14px;
+    width: 100%; 
+    font-size: 22px; 
+    font-family: Verdana, Arial;
+}
+
+
+.detailpriceandbutton {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    align-items: baseline;
+    align-items: right;
+    padding-left: 20px;
+    font-weight: 600; 
+}
+
+
+/* Navigation  */
+
+nav {
+    display: flex;
+}
+
+.topbartext{
+    display: flex;
+    margin-right: 80px;
+    justify-content: right;
+    gap: 80px;
+    /* position: right; */
+    /* text-align: right; */
+} 
+
+.topbar{
+    font-size: 22px;
+    height: 22px;
+    margin-top: 40px;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
