@@ -168,12 +168,30 @@ a:link {
     font-size: 23px;
 }
 
+.carttotal{
+    margin-right: 60px;
+    text-align: right;
+    flex-grow: 1;
+    font-size: 25px;
+}
+
 .cartbottom {
     width: 60%;
     /* text-align: center; */
     margin-left: auto;
     margin-right: auto;
 }
+
+.cartitems{
+    padding-top: 30px; 
+    padding-right: 60px; 
+    border-bottom: 6px solid;
+    margin-left: auto; 
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start; 
+    width: 100%; 
+  }
 
 .cartbutton {
     width: 20%;

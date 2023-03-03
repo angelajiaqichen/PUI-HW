@@ -32,24 +32,28 @@
     <!-- body of cart -->
 
     <div class="cart">   
-      <div class="cartitem">
-        <!-- image and remove button -->
-        <div class="cartimagecontainer">
-          <img src="products/original-cinnamon-roll.jpg" class="cartimage">
-          <div class="remove"><a href="./cart.html">Remove</a></div>
-        </div>
+      <div class="cartitems">
+        <template id="carttemplate">
+          <div class="cartitem">
+            <!-- image and remove button -->
+            <div class="cartimagecontainer">
+              <img src="products/original-cinnamon-roll.jpg" class="cartimage">
+              <div class="remove"><a href="./cart.html">Remove</a></div>
+            </div>
 
-          <div class="cartproductdescription">
-              Original cinnamon roll<br>
-              Glazing: Keep original<br>
-              Pack Size: 1<br><br>
-            <div class="cartproductprice">$ 2.49</div>
+              <div class="cartproductdescription">
+                <p id="type"></p>
+                <p id="glazing"></p>
+                <p id="pack-size"></p>
+                <div class="cartproductprice">$ 2.49</div>
+              </div>
           </div>
+        </template> 
       </div>
       <br><br>
  
 
-      <div class="cartitem">
+      <!-- <div class="cartitem">
         <div class="cartimagecontainer">
           <img src="products/double-chocolate-cinnamon-roll.jpg" class="cartimage">
           <p class="remove"><a href="./cart.html">Remove</a></p>
@@ -61,7 +65,7 @@
               <div class="cartproductprice">$ 27.45</div>
           </div>
       </div>
-      <hr><br>
+      <hr><br> -->
       
       <!-- total and checkout -->
       <div class="cartitem">
@@ -70,7 +74,7 @@
         <div class="cartproductdescription">
           Total:
           <p class="cartbutton">Checkout</p>
-          <div class="cartproductprice">$ 29.94</div>
+          <div class="carttotal">$ 29.94</div>
 
         </div>
       </div>
