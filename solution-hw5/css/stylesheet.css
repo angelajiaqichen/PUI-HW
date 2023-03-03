@@ -143,6 +143,8 @@ a:link {
     padding-bottom: 20px;
     /* flex-shrink: 0;
     margin-right: 0px; */
+    text-decoration: underline; 
+
 }
 
 .nameandprice {

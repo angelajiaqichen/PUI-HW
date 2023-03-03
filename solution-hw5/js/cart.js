@@ -66,9 +66,11 @@ for (const roll of cart){
   createElement(roll); 
 }
 
+// works with remove
 function deleteRoll(roll){
   roll.element.remove(); 
   cart.delete(roll); 
+  console.log("deleted roll")
 }
 
 //takes a Roll instance as an argument, and appends the appropriate DOM elements to the shopping cart page
@@ -80,17 +82,18 @@ function createElement(roll){
   updateElement(roll); 
 
   // remove item from cart
-  const removeBtn = roll.element.querySelector('.remove'); 
-  removeBtn.addEventListener('click', () => {
+  const removeButton = roll.element.querySelector('.remove'); 
+  removeButton.addEventListener('click', () => {
     // cannot delete if cart is already empty
-    if(cart.length != 0){
+    console.log(cart.length)
+    if(cart.size > 0){
       deleteRoll(roll);
       cartCurrTotal -= parseFloat(calculateCartTotal(roll)); 
       const cartTotalPrice = document.querySelector('.carttotal'); 
       cartTotalPrice.innerText = '$ ' + cartCurrTotal.toFixed(2);
     }
   });
-  // cart is not empty
+ 
   const rollListElement = document.querySelector('.cartitems'); 
   rollListElement.append(roll.element)
   cartCurrTotal += parseFloat(calculateCartTotal(roll)); 
@@ -98,7 +101,7 @@ function createElement(roll){
   cartTotalPrice.innerText = '$ ' + cartCurrTotal.toFixed(2);
 }
 
-// update cart given the rolls
+// update roll information
 function updateElement(roll){
   const rollImageElement = roll.element.querySelector('.cartimage'); 
   rollImageElement.src = './products/' + roll.type.toLowerCase() + '-cinnamon-roll.jpg'; 
