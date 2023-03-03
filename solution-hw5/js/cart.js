@@ -98,7 +98,8 @@ function createElement(roll){
   rollListElement.append(roll.element)
   cartCurrTotal += parseFloat(calculateCartTotal(roll)); 
   const cartTotalPrice = document.querySelector('.carttotal'); 
-  cartTotalPrice.innerText = '$ ' + cartCurrTotal.toFixed(2);
+  cartTotalPrice.innerText = '$ ' + parseFloat(cartCurrTotal.toFixed(2)); 
+  // parsefloat prevents empty cart from displaying "$ -0.00" as total
 }
 
 // update roll information
