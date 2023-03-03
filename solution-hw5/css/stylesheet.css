@@ -174,18 +174,25 @@ a:link {
 
 .carttotal{
     margin-right: 60px;
+    margin-left: 200px;
+    
     text-align: right;
-    flex-grow: 1;
-    font-size: 25px;
+    /* flex-grow: 1; */
+    font-size: 23px;
+    width: 200px; 
+    /* margin-top: 40px; 
+    margin-left: auto;  */
 }
 
 .carttotalcontainer{
     font-size: 26px; 
     margin-bottom: 0px;
-    text-align: center; 
-    width: 200px; 
-    margin-top: 40px; 
-    margin-left: 15%; 
+    text-align: right; 
+    /* width: 200px;  */
+    display: flex;
+    margin-top: 30px; 
+    /* margin-right: 100px;  */
+    margin-left: 25%;
 }
 
 .cartbottom {
