@@ -13,7 +13,7 @@ let glazingOption = "Keep original";
 let packOption = 1;
 let basePrice = 0;
 let rollType = NaN;
-let cart = [];
+// let cart = [];
 
 populateCinnamonData();
 populateSelectOptions();
@@ -56,6 +56,9 @@ function populateSelectOptions() {
 	}
 }
 
+// HW 6
+retrieveFromLocalStorage();
+
 
 /* Record the current glazing option and update the total price */
 function glazingChange(element) {
@@ -86,8 +89,10 @@ class Roll {
     }
 }
 
+// add the roll to cart and print out the cart in console
 function printCart() {
 	const roll = new Roll(rollType, glazingOption, packOption, basePrice);
 	cart.push(roll);
 	console.log(cart);
 }
+

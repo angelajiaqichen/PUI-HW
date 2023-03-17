@@ -9,8 +9,8 @@ const packPrices = {
     "1" : 1, "3" : 3, "6" : 5, "12" : 10
 };
 
-// the cart array
-const cartItems = [];
+// // the cart array
+// const cart = [];
 // used to create unique ID for each role, based on the order in which it's added to cart
 let rollCounter = 0;
 
@@ -24,13 +24,13 @@ class Roll {
     }
 }
 
-// initialize the cart with 4 rolls
-function initializeCart() {
-    cartItems.push(new Roll("Original", "Sugar milk", 1, rolls["Original"]["basePrice"]));
-    cartItems.push(new Roll("Walnut", "Vanilla milk", 12, rolls["Walnut"]["basePrice"]));
-    cartItems.push(new Roll("Raisin", "Sugar milk", 3, rolls["Raisin"]["basePrice"]));
-    cartItems.push(new Roll("Apple", "Keep original", 3, rolls["Apple"]["basePrice"]));
-}
+// // initialize the cart with 4 rolls
+// function initializeCart() {
+//     cart.push(new Roll("Original", "Sugar milk", 1, rolls["Original"]["basePrice"]));
+//     cart.push(new Roll("Walnut", "Vanilla milk", 12, rolls["Walnut"]["basePrice"]));
+//     cart.push(new Roll("Raisin", "Sugar milk", 3, rolls["Raisin"]["basePrice"]));
+//     cart.push(new Roll("Apple", "Keep original", 3, rolls["Apple"]["basePrice"]));
+// }
 
 // add a Roll instance to the DOM
 // also register a function to remove this roll when the "Remove" link is clicked
@@ -62,8 +62,10 @@ function addRollToPage(roll) {
     let currentRollCounter = rollCounter;
     cartItemElement.querySelector(".remove").onclick = function() {
         cartContainer.querySelector(`#roll-${currentRollCounter}`).remove();
-        cartItems.splice(cartItems.indexOf(roll), 1);
+        cart.splice(cart.indexOf(roll), 1);
         updateTotalPrice();
+        saveToLocalStorage();
+        console.log(cart);
     }
 
     cartContainer.appendChild(cartItemElement);
@@ -73,11 +75,12 @@ function addRollToPage(roll) {
 // update the total price field based on the current cart
 function updateTotalPrice() {
     let totalPrice = 0;
-    cartItems.forEach(roll => totalPrice += roll.calculatedPrice);
+    cart.forEach(roll => totalPrice += roll.calculatedPrice);
     const totalPriceElement = document.querySelector(".total-price");
     totalPriceElement.innerText = "$ " + totalPrice.toFixed(2);
 }
 
-initializeCart();
-cartItems.forEach(addRollToPage);
+// initializeCart();
+retrieveFromLocalStorage();
+cart.forEach(addRollToPage);
 updateTotalPrice();
