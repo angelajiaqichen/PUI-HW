@@ -49,7 +49,7 @@ function addRollToPage(roll) {
                 <p>Pack Size: ${roll.size}</p>
             </div>
             <div class="item-price">
-                <p>$ ${roll.calculatedPrice}</p>
+                <p>$ ${roll.calculatedPrice.toFixed(2)}</p>
             </div>
         </div>
     `;
@@ -64,7 +64,7 @@ function addRollToPage(roll) {
         cartContainer.querySelector(`#roll-${currentRollCounter}`).remove();
         cart.splice(cart.indexOf(roll), 1);
         updateTotalPrice();
-        saveToLocalStorage();
+        saveCart();
         console.log(cart);
     }
 
@@ -81,6 +81,6 @@ function updateTotalPrice() {
 }
 
 // initializeCart();
-retrieveFromLocalStorage();
+retrieveCart();
 cart.forEach(addRollToPage);
 updateTotalPrice();

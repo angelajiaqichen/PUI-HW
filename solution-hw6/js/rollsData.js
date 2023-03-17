@@ -29,40 +29,23 @@ const rolls = {
 
 // HW 6
 // When the page loads, attempt to retrieve the cart from the local storage. 
-// If no cart exists in the storage, create an empty cart array.
 
 let cart = new Array();
 
-function retrieveFromLocalStorage() {
-
+function retrieveCart() {
     if (localStorage.getItem('storedCart') != null) {
-
-        // get cart string from local storage
-
-         const cartString = localStorage.getItem('storedCart');
-
-        // turn cart string back into Javascript cart array
-
-        cart = JSON.parse(cartString);
-
-    } else {
-
+        const cartStored = localStorage.getItem('storedCart');
+        cart = JSON.parse(cartStored);
+    } 
+    else { // If no cart exists in the storage, create an empty cart array.
         cart = new Array();
-
     }
-
 }
 
 // Convert the updated cart to JSON, save it in the local storage, 
 // and print the current contents of the cart in local storage after saving.
 
-function saveToLocalStorage() {
-
-    // convert cart array into string of text
-
-    const cartString = JSON.stringify(cart);
-
-    // save cart string to local storage
-
-    localStorage.setItem('storedCart', cartString);
+function saveCart() {
+    const cartStored = JSON.stringify(cart);
+    localStorage.setItem('storedCart', cartStored);
 }

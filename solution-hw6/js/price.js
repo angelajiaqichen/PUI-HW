@@ -57,7 +57,7 @@ function populateSelectOptions() {
 }
 
 // HW 6
-retrieveFromLocalStorage();
+retrieveCart();
 
 
 /* Record the current glazing option and update the total price */
@@ -94,7 +94,7 @@ class Roll {
 function printCart() {
 	const roll = new Roll(rollType, glazingOption, packOption, basePrice);
 	cart.push(roll);
-	saveToLocalStorage()
+	saveCart()
 	console.log(cart);
 }
 
