@@ -24,7 +24,7 @@ class Roll {
     }
 }
 
-// // initialize the cart with 4 rolls
+// initialize the cart with 4 rolls
 // function initializeCart() {
 //     cart.push(new Roll("Original", "Sugar milk", 1, rolls["Original"]["basePrice"]));
 //     cart.push(new Roll("Walnut", "Vanilla milk", 12, rolls["Walnut"]["basePrice"]));
@@ -49,7 +49,7 @@ function addRollToPage(roll) {
                 <p>Pack Size: ${roll.size}</p>
             </div>
             <div class="item-price">
-                <p>$ ${roll.calculatedPrice.toFixed(2)}</p>
+                <p>$ ${roll.calculatedPrice}</p>
             </div>
         </div>
     `;
